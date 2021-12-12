@@ -1,0 +1,78 @@
+Zadanie 1 
+
+public static int[] zadanie1(int[] tablica) {
+
+        for(int i = 0; i < tablica.length / 2; i++)
+        {
+            int temp = tablica[i]; // 1
+            tablica[i] = tablica[tablica.length - i - 1];
+            tablica[tablica.length - i - 1] = temp;
+        }
+
+        return tablica;
+    }
+    
+    Zadanie 2 
+    
+    public static String zadanie2(int[] tablica) {
+
+        String temp = "";
+
+        for (int i = 0; i < tablica.length; i++) {
+
+            if (i == tablica.length-1) {
+                temp += tablica[i];
+            } else {
+                temp += tablica[i] + ",";
+            }
+        }
+
+        return temp;
+    }
+    
+    Zadanie 3 
+    
+    public static int[] zadanie3(int[] tablica) {
+
+        int[] temp;
+        int evenLength = 0;
+
+        for (int i = 0; i < tablica.length; i++) {
+            if (tablica[i] % 2 == 0) {
+                evenLength++;
+            }
+        }
+
+        int[] temp2 = new int[evenLength];
+
+        for (int i = 0; i < tablica.length; i++) {
+
+            for (int j = 0; j < temp2.length; j ++) {
+                if (tablica[j] % 2 == 0) {
+                    temp2[j] = tablica[j];
+                }
+            }
+        }
+
+        return temp2;
+    }
+    
+    Zadanie 4
+    
+    public static boolean zadanie4(int[] tablica1, int[] tablica2) {
+        int length = tablica1.length;
+        for (int i=0; i<length; i++) {
+            if (tablica1[i] != tablica2[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    Zadanie 5 
+    
+    public static void zadanie5(int[] tablica) {
+        for(int i = 0; i < tablica.length; i++) {
+            System.out.print(tablica[i]);
+        }
+    }
